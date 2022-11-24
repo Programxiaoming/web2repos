@@ -1,20 +1,17 @@
-//import logo from './logo.svg';
+
 import './App.css';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 function App() {
-    const [color, setColor] = React.useState(JSON.parse(sessionStorage.getItem('color')) || "blue");
-    const [count, setCount] = React.useState(JSON.parse(localStorage.getItem('count')) || 0);
-    const [time, setTime] = React.useState(new Date().toLocaleTimeString());
+    const [color, setColor] = useState(JSON.parse(sessionStorage.getItem('color')) || "blue");
+    const [count, setCount] = useState(JSON.parse(localStorage.getItem('count')) || 0);
+    //const [time, setTime] = useState(new Date().toLocaleTimeString());
     console.log(color);
     console.log(count);
 
-    React.useEffect(() => {
+    useEffect(() => {
     sessionStorage.setItem('color', JSON.stringify(color));
     localStorage.setItem('count', JSON.stringify(count));
-    const interval = setInterval(() =>
-        setTime(new Date().toLocaleTimeString(),1000));
-    return () => clearInterval(interval);
     }, [color, count]);
     
     return (<div>
@@ -22,7 +19,7 @@ function App() {
     It also has a button that counts clicks and toggles style color. */}
     <DisplayMessage color={color} />
     <Clock />
-    <CounterDisplay />
+    <CounterDisplay count={count}/>
     <UserActions setColor={setColor} setCount={setCount} count={count} color={color}/>
     </div>
     );
