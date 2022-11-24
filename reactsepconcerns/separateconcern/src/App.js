@@ -21,16 +21,22 @@ function App() {
     {/* This component has two children that display a message and a clock.
     It also has a button that counts clicks and toggles style color. */}
     <DisplayMessage color={color} />
-    <Clock time={time}/>
+    <Clock />
     <p>{count}</p>
-    <button onClick={() => {setColor(toggle(color)); setCount(count+1)}}>
-    Click me React
-    </button>
+    <UserActions setColor={setColor} setCount={setCount} count={count} color={color}/>
     </div>
     );
     }
 
-    function toggle(color) {
+function UserActions(props) {
+        return <button onClick={() => {
+        props.setColor(toggle(props.color)); 
+        props.setCount(props.count+1)}}>
+        Click me React
+        </button>
+        }
+
+function toggle(color) {
         if (color === "blue") {
             return "red";
         } else if (color ==="red") {
@@ -40,11 +46,11 @@ function App() {
         }
     }
 
-    function DisplayMessage(props) {
+function DisplayMessage(props) {
         return <h1 style={{color: props.color}}>Hello React World!</h1>;
     }
     
-    function Clock(props) {
+function Clock(props) {
         return (<p>React Clock: {props.time} </p>);
     }
     
