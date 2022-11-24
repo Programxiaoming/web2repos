@@ -45,7 +45,7 @@ function App() {
     }
     
     function Clock(props) {
-        return (<p>React Clock: {this.props.time} </p>);
+        return (<p>React Clock: {props.time} </p>);
     }
     
 
