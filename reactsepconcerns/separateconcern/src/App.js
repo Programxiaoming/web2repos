@@ -22,7 +22,7 @@ function App() {
     It also has a button that counts clicks and toggles style color. */}
     <DisplayMessage color={color} />
     <Clock />
-    <p>{count}</p>
+    <CounterDisplay />
     <UserActions setColor={setColor} setCount={setCount} count={count} color={color}/>
     </div>
     );
@@ -35,7 +35,10 @@ function UserActions(props) {
         Click me React
         </button>
         }
-
+function CounterDisplay(props) {
+    return <p>{props.count}</p>;
+        }
+   
 function toggle(color) {
         if (color === "blue") {
             return "red";
