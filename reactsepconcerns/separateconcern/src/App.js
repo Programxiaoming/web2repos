@@ -7,15 +7,15 @@ import Contact from './pages/Contact';
 import MainLayout from './layouts/MainLayout';
 
 function App() {
-
     return (
         <div>
             <Routes>
                 <Route path="/" element={<MainLayout />} >
-                <Route index element={<Home />} />
-                <Route path="about" element={<About />} />
-                <Route path="contact" element={<Contact />} />
+                    <Route index element={<Home />} />
+                    <Route path="about" element={<About />} />
+                    <Route path="contact" element={<Contact />} />
                 </Route>
+                <Route path="*" element={<p>Invalid URL</p>} />
             </Routes>
         </div>
     );
