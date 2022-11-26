@@ -30,6 +30,7 @@ function Header() {
             {" "}
             Home
         </NavLink>
+
         <NavLink
           className={({isActive}) =>
           isActive ? "link-active" : "link-inactive"
@@ -38,6 +39,16 @@ function Header() {
             {" "}
             About
         </NavLink>
+
+        <NavLink
+          className={({isActive}) =>
+          isActive ? "link-active" : "link-inactive"
+          } 
+          to="/Content">
+            {" "}
+            Content
+        </NavLink>
+
         <NavLink
           className={({isActive}) =>
           isActive ? "link-active" : "link-inactive"
@@ -45,6 +56,15 @@ function Header() {
           to="/Contact">
             {" "}
             Contact
+        </NavLink>
+
+        <NavLink
+          className={({isActive}) =>
+          isActive ? "link-active" : "link-inactive"
+          } 
+          to="/Details">
+            {" "}
+            Details
         </NavLink>
         
         <NavLink to="/">
