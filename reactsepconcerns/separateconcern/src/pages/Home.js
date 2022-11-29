@@ -1,5 +1,6 @@
 import Main from "../components/Main";
 import React from "react";
+import DbData from "../components/DbData";
 import { Container, Row, Col, Image,Button,Card } from "react-bootstrap";
 
 const Home = () => {
@@ -9,7 +10,10 @@ const Home = () => {
       <Col sm={6}>   
       <div>
       <Main />
-    </div>
+      </div>
+      <div>
+      <DbData />
+      </div>
       </Col>
       <Col sm={6}>   
       <Image
@@ -80,6 +84,7 @@ const Home = () => {
     </Card>
     </Col>
     </Row>
+
     </Container>
 
   );
