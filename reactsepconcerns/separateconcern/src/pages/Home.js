@@ -1,6 +1,12 @@
 import Main from "../components/Main";
 import React from "react";
 import DbData from "../components/DbData";
+import DbData1 from "../components/DbData1";
+import DbData2 from "../components/DbData2";
+import DbData3 from "../components/DbData3";
+import DbData4 from "../components/DbData4";
+import DbData5 from "../components/DbData5";
+import DbData6 from "../components/DbData6";
 import { Container, Row, Col, Image,Button,Card } from "react-bootstrap";
 
 const Home = () => {
@@ -13,6 +19,24 @@ const Home = () => {
       </div>
       <div>
       <DbData />
+      </div>
+      <div>
+      <DbData1 />
+      </div>
+      <div>
+      <DbData2 />
+      </div>
+      <div>
+      <DbData3 />
+      </div>
+      <div>
+      <DbData4 />
+      </div>
+      <div>
+      <DbData5 />
+      </div>
+      <div>
+      <DbData6 />
       </div>
       </Col>
       <Col sm={6}>   
