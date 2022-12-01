@@ -1,9 +1,9 @@
 import Main from "../components/Main";
 import React from "react";
-import DbData from "../components/DbData";
-import Register from "../components/Register";
+import LoginFrom from "../components/LoginForm";
 import { Container, Row, Col, Image,Button,Card } from "react-bootstrap";
-import Login from "../components/Login";
+
+
 
 const Home = () => {
   return (
@@ -14,15 +14,8 @@ const Home = () => {
       <Main />
       </div>
       <div>
-      <DbData />
+      <LoginFrom />
       </div>
-      <div>
-      <Login />
-      </div>
-      <div>
-      <Register />
-      </div>
-
       </Col>
       <Col sm={6}>   
       <Image
