@@ -2,19 +2,19 @@ import { useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 //import Button from "@mui/material/Button";
 
-function HomeButton() {
+function LoginButton() {
     const navigate = useNavigate();
     const handleSubmit = (event) => {
         try {
-            navigate("/", { replace: true });
+            navigate("/LoginPage", { replace: true });
             } catch (error) {
             console.log(error);
         }
     };
     return (
         <div style={{ flexDirection: "row", direction: "rtl" }}>
-            <Button variant="contained" onClick={handleSubmit}>Home</Button>
+            <Button variant="contained" onClick={handleSubmit}>Login here</Button>
         </div>
     );
 }
-export default HomeButton;
+export default LoginButton;

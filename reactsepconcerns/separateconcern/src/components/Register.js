@@ -1,15 +1,15 @@
 import React from "react";
 
 function Register() {
-return (
-<>
-<button onClick={registering}>Register</button>
-</>
+    return (
+    <>
+        <button onClick={registering}>Register</button>
+    </>
 )}
 
 export default Register;
 
-function registering() {
+async function registering() {
     fetch("http://localhost:3001/users/register", {
     method: "POST",
     body: JSON.stringify({
