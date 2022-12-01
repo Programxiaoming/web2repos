@@ -1,20 +1,20 @@
 import Main from "../components/Main";
 import React from "react";
-import LoginFrom from "../components/LoginForm";
+import LoginButton from "../components/LoginButton";
 import { Container, Row, Col, Image,Button,Card } from "react-bootstrap";
-
-
 
 const Home = () => {
   return (
     <Container>
+      <Row className="my-1 py-1">   
+      <div>
+        <LoginButton />
+      </div>
+      </Row>
       <Row className="my-3">
       <Col sm={6}>   
       <div>
       <Main />
-      </div>
-      <div>
-      <LoginFrom />
       </div>
       </Col>
       <Col sm={6}>   

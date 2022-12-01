@@ -1,7 +1,4 @@
 import React from "react";
-//import { NavLink } from "react-router-dom";
-//import HomeButton from "./HomeButton";
-//import "./Header.css";
 import {Navbar,Container,Nav} from 'react-bootstrap';
 
 function Header() {
@@ -19,6 +16,7 @@ function Header() {
             <Nav.Link href="/Details">Details</Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        Please Login
       </Container>
     </Navbar>
   );
