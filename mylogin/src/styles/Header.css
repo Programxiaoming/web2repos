@@ -1,0 +1,8 @@
+.link-active{
+    color: green;
+    background-color: #bfa;
+}
+
+.link-inactive{
+    color:blue
+}

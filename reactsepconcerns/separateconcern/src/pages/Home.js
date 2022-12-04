@@ -2,13 +2,36 @@ import Main from "../components/Main";
 import React from "react";
 import LoginButton from "../components/LoginButton";
 import { Container, Row, Col, Image,Button,Card } from "react-bootstrap";
+import LogoutButton from "../components/LogoutButton";
+import { LoggedInContext } from '../App';
+import {useContext} from 'react';
 
-const Home = () => {
-  return (
+function Home(){
+const [isLoggedIn, setIsLoggedIn] = useContext(LoggedInContext);
+if(!isLoggedIn){
+return (
+
+  <Container>
+    <Row><div><LoginButton /></div></Row>
+  </Container>
+
+)}
+else{
+return (
+  <Container>
+    <Row><div>Welcome!<LogoutButton /></div></Row>
+  </Container>
+)
+
+}
+    /**
+     *   return (
     <Container>
       <Row className="my-1 py-1">   
       <div>
         <LoginButton />
+        <LogoutButton />
+        <p>Welcome</p>
       </div>
       </Row>
       <Row className="my-3">
@@ -90,5 +113,7 @@ const Home = () => {
     </Container>
 
   );
+     */
+
 };
 export default Home;

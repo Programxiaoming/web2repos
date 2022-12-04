@@ -16,10 +16,8 @@ function Header() {
             <Nav.Link href="/Details">Details</Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        Please Login
-      </Container>
+      </Container>      
     </Navbar>
-  );
+  ); 
 }
-
 export default Header;
