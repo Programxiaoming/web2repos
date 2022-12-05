@@ -1,0 +1,31 @@
+.main {
+    min-height: 93vh;
+    display: flex;
+    align-items: center;
+    background-image: url("../../background1.PNG ");
+    background-position: center;
+    background-size: cover;
+}
+
+.intro-text {
+    width: 100%;
+    text-align: center;
+}
+
+.buttonContainer {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.loginButton{
+    width:100px;
+    height: 35px;
+}
+
+@media only screen and (max-width:1200px){
+    .buttonContainer {
+        padding: 0 200px;
+    }
+    
+}
