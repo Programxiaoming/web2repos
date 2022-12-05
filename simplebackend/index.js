@@ -97,12 +97,12 @@ app.patch("/users/:username/password", async (req,
 
 /* An API delete request using URL path parameters to /users/:username */
 app.delete("/users/:username", async (req, res) => {
-const username = req.params.username;
-const results = await 
-userModel.deleteOne({ username: username 
-});
-res.send(results);
-});
+    const username = req.params.username;
+    const results = await 
+    userModel.deleteOne({ username: username 
+    });
+    res.send(results);
+    });
 
 app.post("/users/register", async (request, response) => {
     const id = request.body.id;
