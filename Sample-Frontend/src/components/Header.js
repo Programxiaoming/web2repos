@@ -31,9 +31,7 @@ function Header() {
             </NavDropdown>
             <Nav.Link href="/UserPage">UserPage</Nav.Link>
           </Nav>
-
         </Navbar.Collapse>
-        
       </Container>
     </Navbar>
   );

@@ -14,7 +14,9 @@ function Avatar() {
   };
   return (
     <div style={{ flexDirection: "row", direction: "rtl" }}>
-      <Button style={{backgroundImage:"url('./images/person.png')",backgroundSize:"cover", width:"40px", height:"40px"}}onClick={handleSubmit}></Button>
+      <Button style={{backgroundColor:"white",backgroundSize:"cover"}}onClick={handleSubmit}> 
+        <img src="person.png" alt="ming" size="35" height="35" width="35" />
+      </Button>
     </div>
   );
 
