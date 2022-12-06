@@ -1,7 +1,7 @@
 require ('dotenv').config();
 
 const mongoose = require("mongoose");
-const userModel = require("./models");
+const userModel = require("./notemodels");
 const validator = require('validator');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
@@ -25,8 +25,7 @@ app.use(express.json()); // Allows express to read a request body
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
         
-/* An API get request to /users to get 
-all users */
+/* An API get request to /users to get all user */
 app.get("/users", async (req, res) => {
     const users = await userModel.find();
     res.send(users);
@@ -45,7 +44,7 @@ app.post("/users", async (req, res) => {
     });
 
 /* An API get request using query parameters to /users?username=XXX */
-app.get("/user", async (req, res) => {
+app.get("/users", async (req, res) => {
     const username = req.query.username;
     const user = await userModel.findOne({ 
     username: username });
@@ -68,7 +67,7 @@ app.post("/users/get", async (req, res) => {
     res.send(user);
     });
 
-/* An API post request using body /users. Replaces the entire user. */
+/* An API post request using body /users. Replaces the entire users. */
 app.put("/users", async (req, res) => {
     const password = req.body.password;
     const username = req.body.username;
@@ -156,5 +155,13 @@ app.post("/users/login", async (request, response) => {
     }
     response.send({ success: false });
     })
+
+    app.get("/notes", async (req, res) => {
+        const notes = await noteModel.find()
+        res.json(notes);});
+
+    app.get("/notes/:id", async (req, res) => {
+        const note = note.find((n)=>n.id === req.params.id);
+        res.send(note);})
 
 app.listen(port, () => console.log(`Hello world app listening on port ${port}!`))

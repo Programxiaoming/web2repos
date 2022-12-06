@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {Link} from 'react-router-dom';
+import Avatar from './Avatar';
 
 function Header() {
   return (
@@ -17,6 +18,7 @@ function Header() {
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
             </Form>
             </Nav>
+            <Avatar />
           <Nav className="m-auto">
             <Nav.Link href="#home">My Notes</Nav.Link>
             
@@ -27,10 +29,11 @@ function Header() {
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#link">About</Nav.Link>
+            <Nav.Link href="/UserPage">UserPage</Nav.Link>
           </Nav>
 
         </Navbar.Collapse>
+        
       </Container>
     </Navbar>
   );
