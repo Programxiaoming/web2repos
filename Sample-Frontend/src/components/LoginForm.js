@@ -1,4 +1,4 @@
-import { Container,Row,Button } from "react-bootstrap";
+import { Container,Row,Button, Col } from "react-bootstrap";
 import "./LoginForm.css";
 
 const LoginForm = () => {
@@ -6,7 +6,9 @@ const LoginForm = () => {
         <div className='main'>
             <Container>
                 <Row>
-                    <div className="intro-text">
+                <Col sm={5}></Col>
+                <Col sm={3}>                    
+                <div className="intro-text">
                         <div>
                         <h1>Note any time, welcome...</h1>
                         <p>ideas, moods, reviews, anything you can not here...</p>
@@ -20,7 +22,9 @@ const LoginForm = () => {
                             </a>
 
                         </div>
-                    </div>
+                    </div></Col>
+                <Col sm={4}></Col>
+
                 </Row>
                 </Container> 
                 </div>
